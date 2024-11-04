@@ -1,0 +1,130 @@
+ /* Reset and page setup */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 210mm;  /* A4 width */
+    height: 297mm; /* A4 height */
+    margin: 0;     /* Removed auto margin */
+    background: white;
+    padding: 20mm;
+    font-family: Arial, sans-serif;
+}
+
+.heading {
+    text-align: left;    /* Aligned heading to left */
+    margin-bottom: 15mm;
+    font-size: 20px;
+    color: #333;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+
+table {
+    width: auto;        /* Auto width */
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-left: 0;     /* Ensure left alignment */
+}
+
+/* Fixed column widths for columns 2 and 3 */
+.col2, .col3 {
+    width: 1.5in;
+}
+
+.col1{
+    width: .5in;
+}
+
+td {
+    border: 0.5px solid #333;
+    padding: 5px;
+    text-align: center;
+    height: 1.215in;    /* Fixed height for data rows */
+    vertical-align: middle;
+    font-size: 11px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    height: 0.3in;      /* Different height for header */
+    border: 0.5px solid #333;
+    font-size: 11px;
+}
+
+.image-cell {
+    position: relative;
+    padding: 2px;
+}
+
+.file-input {
+    display: none;
+}
+
+.image-preview {
+    width: 100%;
+    height: calc(1.215in - 4px); /* Account for cell padding */
+    border: 1px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.preview-text {
+    display: block;
+    text-align: center;
+    color: #666;
+}
+.observation-area {
+    width: 100%;
+    height: calc(1.215in - 12px); /* Account for padding */
+    resize: none;
+    padding: 5px;
+    border: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    background-color: white;
+}
+
+.observation-area:focus {
+    outline: none;
+    background-color: #f8f9fa;
+}
+
+/* Ensure the third column cells have minimal padding for textarea */
+td.observation-cell {
+    padding: 5px;
+    vertical-align: top;
+}
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    body {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    th {
+        background-color: #f2f2f2 !important;
+    }
+}
