@@ -1,4 +1,3 @@
-// Image handling (keep your existing image upload code)
 document.addEventListener('DOMContentLoaded', function() {
     const imageCells = document.querySelectorAll('.image-cell');
 
@@ -22,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const reader = new FileReader();
                 reader.onload = function(e) {
                     preview.style.backgroundImage = `url(${e.target.result})`;
+                    preview.style.backgroundSize = 'cover';
+                    preview.style.backgroundPosition = 'center';
                     previewText.style.display = 'none';
                 };
                 reader.readAsDataURL(file);
@@ -30,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Simplified export function
 function exportToWord() {
     try {
         const header = `
@@ -38,8 +38,16 @@ function exportToWord() {
             <head>
                 <meta charset="utf-8">
                 <style>
-                    table { border-collapse: collapse; width: auto; }
-                    td, th { border: 1px solid black; padding: 5px; font-size: 11px; }
+                    table { border-collapse: collapse; width: 3.5in; }
+                    td, th { 
+                        border: 0.5px solid #333; 
+                        padding: 5px; 
+                        font-size: 11px; 
+                    }
+                    th { 
+                        background-color: #f2f2f2; 
+                        height: 0.3in; 
+                    }
                     td { height: 1.215in; }
                     .col1 { width: 0.5in; }
                     .col2, .col3 { width: 1.5in; }

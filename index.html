@@ -1,78 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>A4 Portrait</title>
-    <style>
-       
-    </style>
-</head>
-<body>
-    <h1 class="heading">3x3 Table Layout</h1>
-    <button onclick="exportToWord()" style="margin: 10px 0;">Export to Word</button>
+    <style></style>
+  </head>
+  <body>
+   
+    <button onclick="exportToWord()" style="margin: 10px 0">
+      Export to Word
+    </button>
     <table>
-        <colgroup>
-            <col class="col1">
-            <col class="col2">
-            <col class="col3">
-        </colgroup>
-        <tr>
-            <th>Functional Zone</th>
-            <th>Photo Before</th>
-            <th>Observation</th>
-        </tr>
-        <tr>
-            <td>Ceiling</td>
-            <td class="image-cell">
-                <input type="file" class="file-input" accept="image/*">
-                <div class="image-preview">
-                    <span class="preview-text">Click to add photo</span>
-                </div>
-            </td>
-            <td class="observation-cell">
-                <textarea class="observation-area" placeholder="Enter observations here"></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>Wall Finish</td>
-            <td class="image-cell">
-                <input type="file" class="file-input" accept="image/*">
-                <div class="image-preview">
-                    <span class="preview-text">Click to add photo</span>
-                </div>
-            </td>
-            <td class="observation-cell">
-                <textarea class="observation-area" placeholder="Enter observations here"></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>Floor Finish</td>
-            <td class="image-cell">
-                <input type="file" class="file-input" accept="image/*">
-                <div class="image-preview">
-                    <span class="preview-text">Click to add photo</span>
-                </div>
-            </td>
-            <td class="observation-cell">
-                <textarea class="observation-area" placeholder="Enter observations here"></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>Electrical Fittings</td>
-            <td class="image-cell">
-                <input type="file" class="file-input" accept="image/*">
-                <div class="image-preview">
-                    <span class="preview-text">Click to add photo</span>
-                </div>
-            </td>
-            <td class="observation-cell">
-                <textarea class="observation-area" placeholder="Enter observations here"></textarea>
-            </td>
-        </tr>
+      <colgroup>
+        <col class="col1" />
+        <col class="col2" />
+        <col class="col3" />
+      </colgroup>
+    
+      <tr>
+        <td>Ceiling</td>
+        <td class="image-cell">
+          <input type="file" class="file-input" accept="image/*" />
+          <div class="image-preview">
+            <span class="preview-text">Click to add photo</span>
+          </div>
+        </td>
+        <td class="observation-cell">
+          <textarea
+            class="observation-area"
+            placeholder="Enter observations here"
+          ></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>Wall Finish</td>
+        <td class="image-cell">
+          <input type="file" class="file-input" accept="image/*" />
+          <div class="image-preview">
+            <span class="preview-text">Click to add photo</span>
+          </div>
+        </td>
+        <td class="observation-cell">
+          <textarea
+            class="observation-area"
+            placeholder="Enter observations here"
+          ></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>Floor Finish</td>
+        <td class="image-cell">
+          <input type="file" class="file-input" accept="image/*" />
+          <div class="image-preview">
+            <span class="preview-text">Click to add photo</span>
+          </div>
+        </td>
+        <td class="observation-cell">
+          <textarea
+            class="observation-area"
+            placeholder="Enter observations here"
+          ></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>Electrical Fittings</td>
+        <td class="image-cell">
+          <input type="file" class="file-input" accept="image/*" />
+          <div class="image-preview">
+            <span class="preview-text">Click to add photo</span>
+          </div>
+        </td>
+        <td class="observation-cell">
+          <textarea
+            class="observation-area"
+            placeholder="Enter observations here"
+          ></textarea>
+        </td>
+      </tr>
     </table>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
